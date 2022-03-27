@@ -1,4 +1,4 @@
-Simple Image Filter App
+# Simple Image Filter App
 
 This app gives the user the ability to upload an image and apply some basic filters like Black & White, Sepia, Negative, Rainbow, or a Blur. 
 
