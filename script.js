@@ -29,7 +29,10 @@ function loadImage() {
   image.drawTo(imgcanvas);
 
   if (imageIsLoaded(image)) {
-    alert("Image Loaded Successfully");
+    alert("SUCCESS: Image Loaded Successfully");
+  }
+  else if(!imageIsLoaded(image)){
+    alert("ERROR: Image Load Failure")
   }
 }
 
