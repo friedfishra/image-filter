@@ -2,10 +2,57 @@ body {
   background-color: #add8e6;
   margin: 30px;
   text-align: center;
-  /*font-family: Calabria;*/
+  font-family: 'Roboto Slab', serif;
 }
 
 canvas {
   border: solid 1px gray;
-  width: 300px;
+  
+  max-width: 60vw;
+  max-height: 60vh;
+}
+
+hr {
+  border-top:5px dotted #000;
+  border-bottom: 0px;
+  width: 30%;
+  
+}
+
+
+
+header h1 {
+  padding: 5px 5px 10px 5px;
+}
+
+header h3 {
+  padding: 10px 5px 15px 5px;
+}
+
+main {
+  padding: 10px;
+}
+
+footer {
+  padding: 10px;
+}
+
+footer>h3 {
+  padding: 10px;
+}
+
+footer a {
+  margin: 10px;
+  background-color: cornflowerblue;
+  color: whitesmoke;
+  border-color: #add8e6;
+  padding: 8px 15px 8px 15px;
+  border: 4px solid;
+  border-radius: 3px;
+  text-decoration: none;
+}
+
+footer a:hover {
+  background-color: whitesmoke;
+  color: cornflowerblue;
 }

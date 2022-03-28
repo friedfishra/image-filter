@@ -1,43 +1,59 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Simple Image Filters</title>
   <link rel="stylesheet" href="./style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@600&display=swap" rel="stylesheet">
 
 </head>
-<body>
-<!-- partial:index.partial.html -->
-<script src="https://www.dukelearntoprogram.com/course1/common/js/image/SimpleImage.js"></script>
 
 <body>
-  <h1>SIMPLE IMAGE FILTERS </h1>
-  <h3>Choose an image and apply one of the given filters
-  </h3>
-  <hr>
+  <!-- partial:index.partial.html -->
+  <script src="https://www.dukelearntoprogram.com/course1/common/js/image/SimpleImage.js"></script>
 
-  <p>
-    Select File: <input type="file" id="imgfile" multiple="false" accept="image/*" onchange="loadImage()" />
-  </p>
+  <body>
+    <header>
+      <h1>SIMPLE IMAGE FILTERS </h1>
+      <h3>Choose an image and apply one of the given filters
+      </h3>
+      <hr>
+    </header>
 
-  <canvas id="can1"></canvas>
+    <main>
+      <p>
+        Select File: <input type="file" id="imgfile" multiple="false" accept="image/*" onchange="loadImage()" />
+      </p>
 
-  <p>
-    Filters: <input type="button" id="gray" value="Grayscale" onclick="makeGray()" />
-    <input type="button" id="red" value="Red" onclick="makeRed()" />
-    <input type="button" id="rain" value="Rainbow" onclick="makeRainbow()" />
-    <input type="button" id="sep" value="Sepia" onclick="makeSepia()" />
-    <input type="button" id="neg" value="Negative" onclick="makeNegative()" />
-    <input type="button" id="blr" value="Blur" onclick="makeBlur()" />
+      <canvas id="can1"></canvas>
 
-  </p>
-  <p>
-    <input type="button" id="clr" value="Reset Image" onclick="resetImage()" />
-  </p>
+      <p>
+        Filters: <input type="button" id="gray" value="Grayscale" onclick="makeGray()" />
+        <input type="button" id="red" value="Red" onclick="makeRed()" />
+        <input type="button" id="rain" value="Rainbow" onclick="makeRainbow()" />
+        <input type="button" id="sep" value="Sepia" onclick="makeSepia()" />
+        <input type="button" id="neg" value="Negative" onclick="makeNegative()" />
+        <input type="button" id="blr" value="Blur" onclick="makeBlur()" />
+
+      </p>
+      <p>
+        <input type="button" id="clr" value="Reset Image" onclick="resetImage()" />
+      </p>
+    </main>
+
+    <footer>
+      <h3>Made By Atul Mishra</h3>
+      <a id="git" href="https://github.com/friedfishra" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/atul-a-mishra/" target="_blank">LinkedIn</a>
+    </footer>
+
+  </body>
+  <!-- partial -->
+  <script src="./script.js"></script>
 
 </body>
-<!-- partial -->
-  <script  src="./script.js"></script>
 
-</body>
 </html>
