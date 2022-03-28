@@ -1,13 +1,13 @@
-var image = null;
-var grayimage = null;
-var redimage = null;
-var rainbowimage = null;
-var sepiaimage = null;
-var negativeimage = null;
-var blurimage = null;
+let image = null;
+let grayimage = null;
+let redimage = null;
+let rainbowimage = null;
+let sepiaimage = null;
+let negativeimage = null;
+let blurimage = null;
 
-var imgfile = document.getElementById("imgfile");
-var imgcanvas = document.getElementById("can1");
+let imgfile = document.getElementById("imgfile");
+let imgcanvas = document.getElementById("can1");
 
 function imageIsLoaded(img) {
   if (img != null || img.complete()) {
@@ -30,8 +30,7 @@ function loadImage() {
 
   if (imageIsLoaded(image)) {
     alert("SUCCESS: Image Loaded Successfully");
-  }
-  else if(!imageIsLoaded(image)){
+  } else if (!imageIsLoaded(image)) {
     alert("ERROR: Image Load Failure")
   }
 }
@@ -39,8 +38,8 @@ function loadImage() {
 //gray filter
 function makeGray() {
   if (imageIsLoaded(grayimage)) {
-    for (var pixel of grayimage.values()) {
-      var avg = (pixel.getRed() + pixel.getGreen() + pixel.getBlue()) / 3;
+    for (let pixel of grayimage.values()) {
+      let avg = (pixel.getRed() + pixel.getGreen() + pixel.getBlue()) / 3;
       pixel.setRed(avg);
       pixel.setGreen(avg);
       pixel.setBlue(avg);
@@ -55,8 +54,8 @@ function makeGray() {
 //red filter
 function makeRed() {
   if (imageIsLoaded(redimage)) {
-    for (var pixel_red of redimage.values()) {
-      var avg =
+    for (let pixel_red of redimage.values()) {
+      let avg =
         (pixel_red.getRed() + pixel_red.getGreen() + pixel_red.getBlue()) / 3;
       if (avg < 128) {
         pixel_red.setRed(2 * avg);
@@ -76,16 +75,16 @@ function makeRed() {
 //RAINBOW filter
 function makeRainbow() {
   if (imageIsLoaded(rainbowimage)) {
-    var height = rainbowimage.getHeight();
+    let height = rainbowimage.getHeight();
 
-    for (var pixel of rainbowimage.values()) {
-      var r = pixel.getRed();
-      var g = pixel.getGreen();
-      var b = pixel.getBlue();
-      //var x = pixel.getX();
-      var y = pixel.getY();
+    for (let pixel of rainbowimage.values()) {
+      let r = pixel.getRed();
+      let g = pixel.getGreen();
+      let b = pixel.getBlue();
+      //let x = pixel.getX();
+      let y = pixel.getY();
 
-      var avg = (r + g + b) / 3;
+      let avg = (r + g + b) / 3;
 
       if (y < height / 7) {
         //first section for RED
@@ -186,16 +185,16 @@ function makeRainbow() {
 //sepia filter
 function makeSepia() {
   if (imageIsLoaded(sepiaimage)) {
-    for (var pixel of sepiaimage.values()) {
-      var r = pixel.getRed();
-      var g = pixel.getGreen();
-      var b = pixel.getBlue();
+    for (let pixel of sepiaimage.values()) {
+      let r = pixel.getRed();
+      let g = pixel.getGreen();
+      let b = pixel.getBlue();
 
-      var tr = r * 0.393 + g * 0.769 + b * 0.189;
+      let tr = r * 0.393 + g * 0.769 + b * 0.189;
 
-      var tg = r * 0.349 + g * 0.686 + b * 0.168;
+      let tg = r * 0.349 + g * 0.686 + b * 0.168;
 
-      var tb = r * 0.272 + g * 0.534 + b * 0.131;
+      let tb = r * 0.272 + g * 0.534 + b * 0.131;
 
       pixel.setRed(tr);
       pixel.setGreen(tg);
@@ -209,10 +208,10 @@ function makeSepia() {
 //NEGATIVE FILTER
 function makeNegative() {
   if (imageIsLoaded(negativeimage)) {
-    for (var pixel of negativeimage.values()) {
-      var r = pixel.getRed();
-      var g = pixel.getGreen();
-      var b = pixel.getBlue();
+    for (let pixel of negativeimage.values()) {
+      let r = pixel.getRed();
+      let g = pixel.getGreen();
+      let b = pixel.getBlue();
 
       pixel.setRed(255 - r);
       pixel.setGreen(255 - g);
